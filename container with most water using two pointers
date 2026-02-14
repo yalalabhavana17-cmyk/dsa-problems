@@ -1,0 +1,17 @@
+class Solution {
+    public static void main(String args[]) {
+        int[] height=(int[])args[0];
+        int n=height.length,l=0,r=n-1,area=0;
+        while(l<r)
+        {
+            int h=Math.min(height[l],height[r]),width=r-l;
+            area=Math.max(area,h*width);
+            if(height[l]<height[r])
+            l++;
+            else
+            r--;
+
+        }
+        return area;
+    }
+}
